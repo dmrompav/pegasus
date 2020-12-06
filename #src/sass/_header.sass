@@ -1,0 +1,164 @@
+// ! header============================================================
+.header
+	width: 100vw
+.topline
+	height: 114px
+	width: 100vw
+	&__container
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: end
+	&__hr
+		width: 47%
+		height: 1px
+		background-color: $bl
+		position: absolute
+		top: 26px
+		&_1
+			left: -15px
+		&_2
+			right: -15px
+	&__contacts
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+	&__contact
+		position: relative
+		height: 40px
+		margin-bottom: 22px
+		&_1
+			margin-right: 72px
+		&_2
+		&:hover>.topline__contact-number
+			color: $bi
+			text-shadow: 0px 0px 5px $bi
+		&:hover>.topline__contact-description
+			left: 15px
+			padding-left: 8px
+	&__contact-number
+		color: $bl
+		font-size: 17px
+		font-weight: 500
+		font-style: normal
+		letter-spacing: 1px
+		line-height: normal
+		transition: color 0.2s, text-shadow 0.2s
+	&__contact-description
+		font-size: 10px
+		text-transform: uppercase
+		font-weight: 500
+		font-style: normal
+		letter-spacing: 1px
+		line-height: normal
+		color: $bi
+		background-color: #fff
+		z-index: 1
+		position: absolute
+		left: 0
+		top: 27px
+		padding-right: 8px
+		transition: left 0.2s, padding-left 0.2s
+	&__contact-hr
+		width: 98%
+		height: 1px
+		z-index: 0
+		position: absolute
+		left: 0
+		top: 32px
+		background-color: $bi
+	&__logo
+		margin-bottom: 17px
+	&__logo-img
+		width: 213px
+		height: 82px
+	&__buttons
+		margin: 0 0 29px 15px
+	&__button
+		text-transform: uppercase
+		font-size: 13px
+		font-weight: 500
+		width: 185px
+		letter-spacing: 0.75px
+		color: $wh
+		background-color: $bi
+		padding: 8px 0
+		transition: border 0.2s, color 0.2s, background-color 0.2s
+		&:hover
+			border: 1px solid #2f2c34
+			padding: 7px 0
+			color: $bl
+			background-color: transparent
+		&_1
+			margin-right: 22px
+		&_2
+.container
+	position: relative
+	width: 95vw
+	max-width: 1170px
+	margin: 0 auto 0 auto
+	height: 100%
+.nav-line
+	width: 100vw
+	background-color: $bl
+	&__container
+	&__nav
+		width: 100%
+	&__ul
+		height: 60px
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__li
+		&_1
+		&_2
+		&_3
+		&_4
+		&_5
+		&_6
+	&__a
+		padding: 15px 0
+		font-size: 15px
+		font-weight: 400
+		font-style: normal
+		letter-spacing: normal
+		font-family: $R
+		color: $wh
+		text-transform: uppercase
+		word-wrap: none
+		transition: text-shadow 0.2s
+		&:hover
+			text-shadow: 0px 0px 5px #fff, 0px 0px 15px #fff, 0px 0px 25px #fff, 0px 0px 35px #fff
+	&__separator
+		height: 20px
+		width: 1px
+		background-color: #fff
+.nav-small
+	width: 100vw
+	&__container
+	&__ul
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 8px 0 10px 0
+	&__li
+		color: $bl
+		&_1
+		&_2
+		&_3
+			color: $bi
+	&__a
+		margin: 0 6px
+		color: inherit
+		font-size: 10px
+		font-weight: 500
+		text-transform: uppercase
+		letter-spacing: 1px
+	&__separator
+		font-size: 10px
+	&__hr
+		width: 100%
+		height: 1px
+		background-color: $bl
+		opacity: 0.1

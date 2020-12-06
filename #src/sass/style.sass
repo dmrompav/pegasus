@@ -1,0 +1,29 @@
+@import "_null.scss"
+
+//==== colors ====
+$bl: #2f2c34
+$bi: #d0aa8c
+$wh: #fff
+$gr: #9a9a9a
+$blbl: #131313
+$dark1: #343434
+$dark2: #332f36
+//==== fonts ====
+@font-face
+	font-family: R
+	src: url(../fonts/Romul.woff2)
+$M: 'Montserrat', sans-serif
+$R: R
+
+@import "_header.sass"
+@import "_main.sass"
+@import "_footer.sass"
+
+body
+	font-family: $M
+	width: 100vw
+	overflow-x: hidden
+	height: 100%
+#wrapper
+	opacity: 0
+	transition: opacity 0.2s ease-out 0.2s
