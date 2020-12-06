@@ -5,10 +5,10 @@ window.onload = function() {
 
 	// !images =======================================================
 	let articleImg = document.querySelectorAll('.article__photo');
-	articleImg[0].style.backgroundImage = 'url(../img/img1.png)';
-	articleImg[1].style.backgroundImage = 'url(../img/img2.png)';
-	articleImg[2].style.backgroundImage = 'url(../img/img3.png)';
-	articleImg[3].style.backgroundImage = 'url(../img/img4.png)';
-	articleImg[4].style.backgroundImage = 'url(../img/img5.png)';
-	articleImg[5].style.backgroundImage = 'url(../img/img6.png)';
+	articleImg[0].style.backgroundImage = 'url(../img/imga.png)';
+	articleImg[1].style.backgroundImage = 'url(../img/imgb.png)';
+	articleImg[2].style.backgroundImage = 'url(../img/imgc.png)';
+	articleImg[3].style.backgroundImage = 'url(../img/imgd.png)';
+	articleImg[4].style.backgroundImage = 'url(../img/imge.png)';
+	articleImg[5].style.backgroundImage = 'url(../img/imgf.png)';
 }
