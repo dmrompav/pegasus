@@ -2,13 +2,21 @@
 .header
 	width: 100vw
 .topline
+	position: relative
+	z-index: 20
 	height: 114px
 	width: 100vw
+	background-color: #fff
+	@media screen and ( max-width: 1000px ) and ( min-width: 601px )
+		height: auto
 	&__container
 		display: flex
 		flex-direction: row
 		justify-content: space-between
 		align-items: end
+		@media screen and ( max-width: 600px )
+			justify-content: start
+			align-items: center
 	&__hr
 		width: 47%
 		height: 1px
@@ -23,12 +31,25 @@
 		display: flex
 		flex-direction: row
 		flex-wrap: wrap
+		@media screen and ( max-width: 1000px )
+			flex-direction: column
 	&__contact
 		position: relative
 		height: 40px
 		margin-bottom: 22px
+		@media screen and ( max-width: 1000px )
+			margin-bottom: 10px
+		@media screen and ( max-width: 600px )
+			margin: 0
+			height: 0
+			width: 0
+			overflow: hidden
 		&_1
 			margin-right: 72px
+			@media screen and ( max-width: 1200px )
+				margin-right: 22px
+			@media screen and ( max-width: 1000px )
+				margin: 50px 0 10px 0
 		&_2
 		&:hover>.topline__contact-number
 			color: $bi
@@ -68,12 +89,23 @@
 		top: 32px
 		background-color: $bi
 	&__logo
+		position: absolute
+		left: 50%
+		bottom: 0
+		transform: translate(-50%)
 		margin-bottom: 17px
 	&__logo-img
 		width: 213px
 		height: 82px
 	&__buttons
+		display: flex
 		margin: 0 0 29px 15px
+		@media screen and ( max-width: 1000px ) and ( min-width: 601px )
+			flex-direction: column
+		@media screen and ( max-width: 600px )
+			height: 0
+			width: 0
+			overflow: hidden
 	&__button
 		text-transform: uppercase
 		font-size: 13px
@@ -89,28 +121,71 @@
 			padding: 7px 0
 			color: $bl
 			background-color: transparent
+		@media screen and ( max-width: 1200px )
+			width: 150px
 		&_1
 			margin-right: 22px
+			@media screen and ( max-width: 1000px ) and ( min-width: 601px )
+				margin: 10px 0 10px 0
 		&_2
-.container
-	position: relative
-	width: 95vw
-	max-width: 1170px
-	margin: 0 auto 0 auto
-	height: 100%
+
 .nav-line
+	position: relative
+	z-index: 11
 	width: 100vw
 	background-color: $bl
 	background: linear-gradient(155deg, $bl 0%, $bl 20%, $bi 525%)
+	@media screen and ( max-width: 600px )
+		height: 40px
+	&__menu
+		z-index: 10
+		@media screen and ( max-width: 600px )
+			background-color: #fff
+			width: 25px
+			height: 4px
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			&::before
+				content: ''
+				width: 25px
+				height: 4px
+				position: absolute
+				background-color: #fff
+				top: -8px
+			&::after
+				content: ''
+				width: 25px
+				height: 4px
+				position: absolute
+				background-color: #fff
+				top: 8px
 	&__container
+		@media screen and ( max-width: 600px )
+			width: 100vw
+			background-color: $bl
+			background: linear-gradient(155deg, $bl 0%, $bl 20%, $bi 525%)
 	&__nav
 		width: 100%
+		@media screen and ( max-width: 600px )
+			position: absolute
+			z-index: -1
+			left: 0
+			background-color: $bl
+			background: linear-gradient(155deg, $bl 0%, $bl 20%, $bi 525%)
+			top: -500px
+			transition: top 0.4s ease-in-out
 	&__ul
 		height: 60px
 		width: 100%
 		display: flex
 		justify-content: space-between
 		align-items: center
+		@media screen and ( max-width: 600px )
+			flex-direction: column
+			height: auto
+
 	&__li
 		&_1
 		&_2
@@ -131,35 +206,13 @@
 		transition: text-shadow 0.2s
 		&:hover
 			text-shadow: 0px 0px 5px #fff, 0px 0px 15px #fff, 0px 0px 25px #fff, 0px 0px 35px #fff
+		@media screen and ( max-width: 600px )
+			display: block
+			margin: 10px 0px
 	&__separator
 		height: 20px
 		width: 1px
 		background-color: #fff
-.nav-small
-	width: 100vw
-	&__container
-	&__ul
-		display: flex
-		justify-content: center
-		align-items: center
-		padding: 8px 0 10px 0
-	&__li
-		color: $bl
-		&_1
-		&_2
-		&_3
-			color: $bi
-	&__a
-		margin: 0 6px
-		color: inherit
-		font-size: 10px
-		font-weight: 500
-		text-transform: uppercase
-		letter-spacing: 1px
-	&__separator
-		font-size: 10px
-	&__hr
-		width: 100%
-		height: 1px
-		background-color: $bl
-		opacity: 0.1
+		@media screen and ( max-width: 600px )
+			width: 0
+			height: 0

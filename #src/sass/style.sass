@@ -22,8 +22,17 @@ $R: R
 body
 	font-family: $M
 	width: 100vw
-	overflow-x: hidden
 	height: 100%
+	overflow-x: hidden
+	background-size: 100vw
+	@media screen and ( max-width: 603px )
+		background-size: 150vw
 #wrapper
 	opacity: 0
 	transition: opacity 0.2s ease-out 0.2s
+.container
+	position: relative
+	width: 95vw
+	max-width: 1170px
+	margin: 0 auto 0 auto
+	height: 100%

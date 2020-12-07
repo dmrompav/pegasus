@@ -1,4 +1,4 @@
-var project_folder = require("path").basename(__dirname) + "-project",
+var project_folder = require("path").basename(__dirname) + "-dist",
 	source_folder = "#src",
 	path = {
 		src: {

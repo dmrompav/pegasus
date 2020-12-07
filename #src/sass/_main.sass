@@ -1,7 +1,47 @@
 // ! main============================================================
+.nav-small
+	width: 100vw
+	&__container
+	&__ul
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 8px 0 10px 0
+	&__li
+		color: $bl
+		&_1
+		&_2
+		&_3
+			color: $bi
+	&__a
+		margin: 0 6px
+		color: inherit
+		font-size: 10px
+		font-weight: 500
+		text-transform: uppercase
+		letter-spacing: 1px
+	&__separator
+		font-size: 10px
+	&__hr
+		width: 100%
+		height: 1px
+		background-color: $bl
+		opacity: 0.1
+		margin-bottom: 28px
 .main
+	z-index: 0
+	position: relative
 	color: $bl
-	padding: 28px 0 7px 0
+	padding: 0 0 7px 0
+	background-size: 100vw auto
+	&__grad
+		z-index: 0
+		width: 100vw
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background-color: rgba(255, 255, 255, 0.9)
 	&__h1
 		text-transform: uppercase
 		font-size: 17px
@@ -44,14 +84,27 @@
 	flex-direction: row
 	flex-wrap: wrap
 	justify-content: space-between
+	@media screen and ( max-width: 1200px )
+		justify-content: center
 .article
 	width: 555px
 	max-width: 95vw
+	@media screen and ( max-width: 1200px ) and ( min-width: 1050px )
+		width: 450px
+		margin: 0 20px
+	@media screen and ( max-width: 600px )
+		width: 95vw
 	&__photo
 		width: 555px
 		height: 235px
 		background-color: $dark1
 		background-size: 100%
+		@media screen and ( max-width: 1200px ) and ( min-width: 1050px )
+			width: 450px
+			height: 190px
+		@media screen and ( max-width: 600px )
+			width: 95vw
+			height: 39vw
 	&__h3
 		font-family: $R
 		font-size: 25px
@@ -84,23 +137,24 @@
 	&__more
 		position: absolute
 		display: block
-		color: $bl
 		text-align: center
 		text-transform: uppercase
 		font-size: 15px
 		font-weight: 500
 		letter-spacing: 0.87px
 		width: 275px
-		padding: 12px 0 12px 0
-		border: 2px solid $bl
 		transform: rotateX(180deg)
 		backface-visibility: hidden
 		transition: transform 0.2s
+		padding: 12px 0 12px 0
+
+		color: $wh
+		border: 2px solid $bi
+		background-color: $bi
 	&__more-backface
 		position: absolute
 		top: 0px
 		left: -2px
-		color: $wh
 		text-align: center
 		text-transform: uppercase
 		font-size: 15px
@@ -108,8 +162,9 @@
 		letter-spacing: 0.87px
 		width: 275px
 		padding: 12px 0 12px 0
-		border: 2px solid $bi
-		background-color: $bi
 		transform: rotateX(0deg)
 		backface-visibility: hidden
 		transition: transform 0.2s
+		
+		color: $bl
+		border: 2px solid $bl
